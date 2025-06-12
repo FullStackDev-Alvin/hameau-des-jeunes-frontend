@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '/donation.jpg';
+import image from '/image2.jpg';
 
 const Section3 = () => {
   return (
