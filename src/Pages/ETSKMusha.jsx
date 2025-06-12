@@ -30,6 +30,14 @@ const ETSKMushaShowcase = () => {
           <p className="text-gray-600">
             Through your support and the dedication of our mentors, every project becomes a story of resilience and brilliance.
           </p>
+                   <a
+            href="https://etskmusha.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-2 text-white bg-[var(--color-primary)] hover:bg-[var(--color-accent)] px-6 py-3 rounded-full font-medium transition duration-300"
+          >
+            Visit etskmusha.org
+          </a>
         </div>
         <div className="md:w-1/2">
           <img src='https://etsk.org/wp-content/uploads/2017/05/dsc_0331.jpg'
