@@ -11,7 +11,7 @@ export default function BlogRows() {
   // Fetch and chunk blogs
   useEffect(() => {
     const fetchBlogs = async () => {
-      const res = await axios.get('https://hameau-des-jeunes-backend.vercel.app/blogs');
+      const res = await axios.get('https://hameau-des-jeunes-backend.onrender.com/blogs');
       const sorted = res.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       const chunked = [[], [], []];
       sorted.forEach((blog, index) => {

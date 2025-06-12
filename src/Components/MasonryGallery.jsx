@@ -13,7 +13,7 @@ export default function MasonryGallery() {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await axios.get('https://hameau-des-jeunes-backend.vercel.app/images'); // Update this with your actual route
+        const res = await axios.get('https://hameau-des-jeunes-backend.onrender.com/images'); // Update this with your actual route
         setImages(res.data);
         console.log(res.data) // assume res.data is an array of image URLs
       } catch (err) {

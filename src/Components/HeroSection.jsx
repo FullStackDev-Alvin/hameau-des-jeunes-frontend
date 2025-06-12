@@ -6,7 +6,7 @@ const HeroSection = () => {
 
   // Fetch and select 10 random images
   useEffect(() => {
-    fetch("https://hameau-des-jeunes-backend.vercel.app/images/")
+    fetch("https://hameau-des-jeunes-backend.onrender.com/images/")
       .then(res => res.json())
       .then(data => {
         const shuffled = data.sort(() => 0.5 - Math.random());
