@@ -4,9 +4,9 @@ import WhoWeAre from '../Components/WhoWeAre'
 import QuickLinks from '../Components/QuickLinks'
 import Footer from '../Components/Footer'
 import HeroSection from '../Components/HeroSection'
-import Section2 from '../Components/section2'
 import Section3 from '../Components/Section3'
 import MissionAndVision from '../Components/MissionAndVision'
+import SADSection from '../Components/section2'
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
         <HeroSection/>
         <WhoWeAre/>
         <MissionAndVision/>
-        <Section2/>
+        <SADSection/>
         <Section3/>
         <QuickLinks/>
     </div>
