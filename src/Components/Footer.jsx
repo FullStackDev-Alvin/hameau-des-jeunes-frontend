@@ -43,7 +43,7 @@ const Footer = () => {
                         © {new Date().getFullYear()} <NavLink to="/" className="hover:underline">HAMEAU DES JEUNES SAINT KIZITO MUSHA™</NavLink>. All Rights Reserved.
                     </span>
                     <div>
-                        Need a site whatsapp us here - +250736947422 / +250
+                        whatsapp us here - +250 788 436 189
                     </div>
                 </div>
 
