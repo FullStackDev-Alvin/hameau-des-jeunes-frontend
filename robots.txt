@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hameau-des-jeunes-frontend-dsjv.vercel.app/sitemap.xml
