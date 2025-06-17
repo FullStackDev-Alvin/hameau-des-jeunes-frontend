@@ -81,13 +81,17 @@ export function AdminLogin({ onLoginSuccess }) {
   );
 }
 
-// ImageUploader Component - multiple images upload
+
+
+const categories = ['hameau', 'etsk', 'staff','school life','educators','events']; // Add/remove as needed
+
 export function ImageUploader() {
-  const [images, setImages] = useState([]); // local preview before upload
-  const [gallery, setGallery] = useState([]); // images already uploaded
+  const [images, setImages] = useState([]);
+  const [gallery, setGallery] = useState([]);
   const [uploading, setUploading] = useState(false);
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
   useEffect(() => {
     fetchGallery();
@@ -95,7 +99,6 @@ export function ImageUploader() {
 
   async function fetchGallery() {
     try {
-      const token = localStorage.getItem('authToken');
       const res = await axios.get(`${BASE_URL}/images`);
       setGallery(res.data);
     } catch (err) {
@@ -141,6 +144,7 @@ export function ImageUploader() {
       images.forEach((img) => {
         formData.append('images', img.file);
       });
+      formData.append('category', selectedCategory); // Add selected category
 
       await axios.post(`${BASE_URL}/images/upload`, formData, {
         headers: {
@@ -179,6 +183,21 @@ export function ImageUploader() {
       {error && <p className="text-red-600 mb-2">{error}</p>}
       {success && <p className="text-green-600 mb-2">{success}</p>}
 
+      {/* Category Select */}
+      <div className="mb-4">
+        <label className="block mb-1 font-medium">Select Category:</label>
+        <select
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="border border-gray-300 px-4 py-2 rounded w-full sm:w-64"
+        >
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>{cat}</option>
+          ))}
+        </select>
+      </div>
+
+      {/* Image Input */}
       <input
         type="file"
         accept="image/*"
@@ -187,6 +206,7 @@ export function ImageUploader() {
         className="mb-4 block text-primary"
       />
 
+      {/* Preview & Upload */}
       {images.length > 0 && (
         <>
           <h4 className="mb-2 text-lg">Preview Before Upload</h4>
@@ -219,6 +239,7 @@ export function ImageUploader() {
         </>
       )}
 
+      {/* Uploaded Gallery */}
       <div className="mt-8">
         <h4 className="text-lg mb-2">Uploaded Gallery</h4>
         {gallery.length === 0 ? (
@@ -248,6 +269,7 @@ export function ImageUploader() {
     </section>
   );
 }
+
 
 // BlogForm Component
 export function BlogForm({ onBlogPosted }) {

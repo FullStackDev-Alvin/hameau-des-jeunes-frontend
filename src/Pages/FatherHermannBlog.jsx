@@ -2,15 +2,6 @@ import React from "react";
 
 const lifeStories = [
   {
-    title: "Early Life",
-    content:
-      "Born in Germany, Father Hermann Schulz embodied service from a young age. Guided by humility and deep spiritual roots, he was destined for impact.",
-  },
-  {
-    title:"School and studies",
-    content:"In March 1945 he had to leave his homeland. Holding his father's hand, he witnessed his father die while fleeing. Later, he first went to school in Emlichheim (County of Bentheim), where he spent his elementary school years. His mother wanted him to go to a high school. But a Catholic seminary alone would have cost as much money as she had available for herself and her two sons together. That's when Hermann Schulz's mother discovered a Lithuanian grammar school (in Lampertheim). Half of the lessons there were in German and the other half in Lithuanian. Here, Father Hermann Schulz was not exactly a model pupil and his move to Italy was almost an escape. He went to a school of the Salesians of Don Bosco in Italy because he had heard that there was less to learn here. This was not true at all. This is how Father Schulz came across the Salesian Order of Faith, which he was already very enthusiastic about at the time. The training with the Salesians took longer than usual. Because between school and the studies of theology, philosophy and pedagogy there were only three years of internship. In 1968, Hermann Schulz was ordained a priest and was now himself a priest of the Salesian Order."
-  },
-  {
     title:"The first work as a priest",
     content:"At first, Father Hermann Schulz worked for three years at the Lithuanian high school, where he was once a student. There he performed the functions of chaplain, boarding school director and sports teacher."
   },

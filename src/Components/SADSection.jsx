@@ -21,6 +21,12 @@ const partnerLogos = [
     description:
       "A local Rwandan youth organization empowering children and teens through education, creative expression, and sustainable development within their communities.",
   },
+  {
+    name:"Aktion Pater Leppich - Gute Nachricht e.V.",
+    logo:"https://umudugudu.de/wp-content/uploads/2014/10/Umudugudulogoklein51.png",
+    description:"A german established organisation that has sponsored this school for more than a decade with foreign aid and other srudent related necesities"
+
+  }
 ];
 
 export default function SADSection() {
