@@ -8,7 +8,7 @@ const links = [
 
 const QuickLinks = () => {
   return (
-    <div className="p-12 bg-white rounded-lg max-w-screen-xl m-auto my-32 mx-auto">
+    <div className="p-8 bg-white rounded-lg max-w-screen-xl m-auto my-14 mx-auto">
       <h2 className="text-2xl font-bold mb-6 text-primary">Quick Links</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 h-[200px]">
         {links.map(({ title, url, description, icon }) => (
