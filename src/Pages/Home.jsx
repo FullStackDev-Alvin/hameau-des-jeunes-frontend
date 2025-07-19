@@ -8,10 +8,12 @@ import HeroSection from '../Components/HeroSection';
 import Section3 from '../Components/Section3';
 import MissionAndVision from '../Components/MissionAndVision';
 import SADSection from '../Components/SADSection';
+import StructuredData from '../Components/StructuredData';
 
 const Home = () => {
   return (
     <>
+      <StructuredData />
       <Helmet>
         <title>Hameau des Jeunes | ETSK Musha</title>
         <meta
