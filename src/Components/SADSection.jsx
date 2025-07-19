@@ -11,13 +11,13 @@ const sadGallery = [
 const partnerLogos = [
   {
     name: "Barabba’s Clowns Onlus",
-    logo: "https://sad.barabbas.it/img/chi-siamo-1.jpg",
+    logo: "barabbas_clowns.jpg",
     description:
       "An Italian nonprofit inspired by Don Bosco, promoting equality, dignity, and hope through education, theater, and international cooperation. Active in Rwanda with Hameau Des Jeunes to support street children. Learn more at spettacolibarabbas.it.",
   },
   {
     name: "Jaunimo Sodyba",
-    logo: "/images/jeunimon-logo.png",
+    logo: "/Jaunimo_sodyba.jpg",
     description:
       "A local Rwandan youth organization empowering children and teens through education, creative expression, and sustainable development within their communities.",
   },
