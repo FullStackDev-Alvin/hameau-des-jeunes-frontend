@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-
+import { Helmet } from "react-helmet";
 Modal.setAppElement('#root'); // Set for accessibility
 
 const ETSKMushaShowcase = () => {
@@ -9,13 +9,26 @@ const ETSKMushaShowcase = () => {
 
   // Static image JSON data (locally defined)
   const galleryImages = [
-    { id: 1, url: "https://i0.wp.com/etsk.org/wp-content/uploads/2018/03/img_0068-1.jpg", alt: "Class Rooms" },
+    { id: 1, url: "https://i0.wp.com/etsk.org/wp-content/uploads/2018/03/img_0068-1.jpg",  alt: "Class Rooms" },
     { id: 2, url: "https://i0.wp.com/etsk.org/wp-content/uploads/2017/06/img_6102.jpg", alt: "Volley Ball" },
     { id: 3, url: "https://i0.wp.com/etsk.org/wp-content/uploads/2018/03/img_0069-1.jpg", alt: "Computer Labs " },
     { id: 5, url: "https://i0.wp.com/etsk.org/wp-content/uploads/2020/05/12.jpg", alt: "Outdoor project" },
   ];
 
   return (  
+    <>
+     <Helmet>
+    <title>ETSK Musha Showcase | Transforming Dreams into Reality</title>
+    <meta
+      name="description"
+      content="Explore the ETSK Musha gallery showcasing student projects, classrooms, sports, and more. A hub of innovation and growth."
+    />
+    <meta
+      name="keywords"
+      content="ETSK Musha, Musha school, technical training, student projects, education Rwanda, youth development"
+    />
+    <link rel="canonical" href="https://yourdomain.com/etsk-showcase" />
+  </Helmet>
     <div className='max-w-screen-xl w-fit m-auto'>
           <section className="bg-white py-20 px-4 md:px-12 m-auto ">
       {/* Info Section */}
@@ -53,6 +66,7 @@ const ETSKMushaShowcase = () => {
             key={img.id}
             src={img.url}
             alt={img.alt}
+            loading="lazy"
             className="w-full h-[250px] object-cover rounded-lg shadow cursor-pointer hover:scale-105 transition-transform"
             onClick={() => {
               setSelectedImage(img.url);
@@ -109,6 +123,7 @@ const ETSKMushaShowcase = () => {
 
     </section>
     </div>
+    </>
   );
 };
 

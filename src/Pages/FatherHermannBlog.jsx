@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Helmet } from "react-helmet";
 const lifeStories = [
   {
     title:"The first work as a priest",
@@ -39,6 +39,42 @@ const lifeStories = [
 
 const FatherHermannBlog = () => {
   return (
+    <>
+          <Helmet>
+        <title>Father Hermann Schulz | A Life of Purpose and Transformation</title>
+        <meta
+          name="description"
+          content="Explore the inspiring life and mission of Father Hermann Schulz, a dedicated missionary who transformed lives in Rwanda and beyond."
+        />
+        <meta
+          name="keywords"
+          content="Father Hermann Schulz, Rwanda missionary, ETSK Musha, youth village, vocational training, legacy"
+        />
+        <link rel="canonical" href="https://yourdomain.com/father-hermann-blog" />
+
+        {/* Optional: JSON-LD structured data for a blog */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Father Hermann Schulz | A Life of Purpose and Transformation",
+            "description": "Explore the inspiring life and mission of Father Hermann Schulz, a dedicated missionary who transformed lives in Rwanda and beyond.",
+            "author": {
+              "@type": "Person",
+              "name": "Hameau des Jeunes"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Hameau des Jeunes",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://yourdomain.com/logo.png"
+              }
+            },
+            "url": "https://yourdomain.com/father-hermann-blog"
+          })}
+        </script>
+      </Helmet>
     <div className="font-serif text-gray-900 bg-bg leading-relaxed">
       {/* Hero Section */}
       <section className="min-h-[80vh] flex items-center justify-center text-center bg-gradient-to-br from-primary to-indigo-900 text-white px-6">
@@ -83,6 +119,7 @@ const FatherHermannBlog = () => {
         <p className="text-gray-600">© In loving memory of Father Hermann Schulz</p>
       </footer>
     </div>
+    </>
   );
 };
 
