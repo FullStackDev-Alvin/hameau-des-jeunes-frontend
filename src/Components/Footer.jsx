@@ -45,7 +45,7 @@ const Footer = () => {
                         © {new Date().getFullYear()} <NavLink to="/" className="hover:underline">HAMEAU DES JEUNES SAINT KIZITO MUSHA™</NavLink>. All Rights Reserved.
                     </span>
                     <div classname="w-full">
-                        <span className='text-md font-bold text-green-600'>Text us on </span>
+                        {/* <span className='text-md font-bold text-green-600'>Text us on </span> */}
                         <a rel="noopener noreferrer" className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300" href="https://wa.me/+250788436189"> <FaWhatsapp className="text-3xl"/></a>
                     </div>
                 </div>
