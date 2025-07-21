@@ -11,6 +11,7 @@ import Loader from './Components/Loader';
 import FatherHermannBlog from './Pages/FatherHermannBlog';
 import ETSKMushaShowcase from './Pages/ETSKMusha';
 import ContactSection from './Pages/ContactUs';
+import ScrollToTop from './Components/ScrollToTop';
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('authToken');
@@ -35,6 +36,7 @@ function App() {
     <div>
       <Navbar />
       <div className="max-w-screen ">
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
