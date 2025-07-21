@@ -9,6 +9,11 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
+  const closeMenus = () => {
+    setIsOpen(false);
+    setDropdownOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll);
@@ -26,9 +31,13 @@ const Navbar = () => {
         scrolled ? 'py-2' : 'py-10'
       }`}
     >
-      <div className="max-w-screen mx-auto flex  items-center justify-between px-4 md:px-6">
+      <div className="max-w-screen mx-auto flex items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <NavLink to="/" className="text-white font-bold tracking-tight text-lg md:text-2xl">
+        <NavLink
+          to="/"
+          onClick={closeMenus}
+          className="text-white font-bold tracking-tight text-lg md:text-2xl"
+        >
           HAMEAU DES JEUNES St. KIZITO MUSHA
         </NavLink>
 
@@ -42,16 +51,22 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Links */}
-        <div className={`md:flex md:items-center md:space-x-6 ${isOpen ? 'block absolute top-20 left-0' : 'hidden'} w-full md:w-auto`}>
-          <ul className="flex flex-col md:flex-row gap-[5px] md:items-center bg-primary md:bg-transparent  md:rounded-none mt-4 md:mt-0 p-4 md:p-0 space-y-2 md:space-y-0">
+        {/* Navigation Links */}
+        <div
+          className={`md:flex md:items-center md:space-x-6 ${
+            isOpen ? 'block absolute top-20 left-0' : 'hidden'
+          } w-full md:w-auto`}
+        >
+          <ul className="flex flex-col md:flex-row gap-[5px] md:items-center bg-primary md:bg-transparent mt-4 md:mt-0 p-4 md:p-0 space-y-2 md:space-y-0">
+            {/* Home */}
             <li>
-              <NavLink to="/" className={navLinkStyle}>
+              <NavLink to="/" className={navLinkStyle} onClick={closeMenus}>
                 <span className="relative z-10">Home</span>
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-500 group-hover:w-full"></span>
               </NavLink>
             </li>
 
+            {/* Dropdown */}
             <li className="relative">
               <button
                 onClick={toggleDropdown}
@@ -64,50 +79,46 @@ const Navbar = () => {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-500 group-hover:w-full"></span>
               </button>
+
               {dropdownOpen && (
                 <div className="absolute md:left-0 left-20 mt-2 w-48 rounded-md shadow-lg bg-white border border-gray-200 z-10">
                   <NavLink
                     to="/etsk-musha"
                     className="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white"
-                    onClick={() => setDropdownOpen(false)}
+                    onClick={closeMenus}
                   >
                     ETSK Musha
                   </NavLink>
                   <NavLink
                     to="/father-hermann"
                     className="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white"
-                    onClick={() => setDropdownOpen(false)}
+                    onClick={closeMenus}
                   >
                     Father Hermann Schulz
                   </NavLink>
                 </div>
               )}
             </li>
+
+            {/* Other pages */}
             <li>
-              <NavLink to="/Blogs" className={navLinkStyle}>
+              <NavLink to="/Blogs" className={navLinkStyle} onClick={closeMenus}>
                 <span className="relative z-10">Blogs</span>
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-500 group-hover:w-full"></span>
               </NavLink>
             </li>
-
             <li>
-              <NavLink to="/Gallery" className={navLinkStyle}>
+              <NavLink to="/Gallery" className={navLinkStyle} onClick={closeMenus}>
                 <span className="relative z-10">Gallery</span>
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-500 group-hover:w-full"></span>
               </NavLink>
             </li>
-
             <li>
-              <NavLink to="/Contacts" className={navLinkStyle}>
+              <NavLink to="/Contacts" className={navLinkStyle} onClick={closeMenus}>
                 <span className="relative z-10">Contact Us</span>
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-500 group-hover:w-full"></span>
               </NavLink>
